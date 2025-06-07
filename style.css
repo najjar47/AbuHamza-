@@ -1,0 +1,92 @@
+/* لعبة 2048 بواسطة AbuHamza🔻 */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #faf8ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  width: 90vw;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 8vw;
+  margin-bottom: 10px;
+}
+
+.score-container {
+  font-size: 4vw;
+  margin-bottom: 15px;
+}
+
+.game {
+  background: #bbada0;
+  padding: 2vw;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2vw;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+
+.cell {
+  background: #cdc1b4;
+  font-size: 5vw;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.tile-2    { background: #eee4da; color: #776e65; }
+.tile-4    { background: #ede0c8; color: #776e65; }
+.tile-8    { background: #f2b179; color: white; }
+.tile-16   { background: #f59563; color: white; }
+.tile-32   { background: #f67c5f; color: white; }
+.tile-64   { background: #f65e3b; color: white; }
+.tile-128  { background: #edcf72; color: white; }
+.tile-256  { background: #edcc61; color: white; }
+.tile-512  { background: #edc850; color: white; }
+.tile-1024 { background: #edc53f; color: white; }
+.tile-2048 { background: #edc22e; color: white; }
+
+button {
+  margin-top: 15px;
+  padding: 10px 5vw;
+  font-size: 5vw;
+  border: none;
+  background: #8f7a66;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* تحسين على الشاشات الكبيرة */
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+  .score-container {
+    font-size: 1.2em;
+  }
+  .cell {
+    font-size: 24px;
+  }
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
